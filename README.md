@@ -1,4 +1,8 @@
+
+
 # GifSearch
+
+This peoject is currenty under development. It does not function yet. THe only thing that has been completed is the basic component layouts.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
