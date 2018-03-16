@@ -9,9 +9,15 @@ import { SearchService } from '../search.service';
 export class ContentComponent implements OnInit {
   image_data;
   constructor(service: SearchService) {
+
+    // read from serice file
     this.image_data = JSON.parse(service.getData()) ;
     this.image_data = this.image_data['data'];
-    console.log( this.image_data );
+    console.log( this.image_data[0] );
+
+
+
+
   }
 
   ngOnInit() {

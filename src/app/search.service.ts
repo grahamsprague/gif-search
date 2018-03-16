@@ -8,7 +8,7 @@ export class SearchService {
   getData() {
 
     const mydata =  this.exampleData() ;
-    // console.log( mydata['data'][0] );
+    //console.log( mydata['data'][0] );
     return mydata;
 
   }

@@ -3,7 +3,7 @@
   <h2>XX items found for <em>Title.</em></h2>
   <hr>
 <div class="row">
-    <app-preview *ngFor="let myimage of image_data"></app-preview>
+    <app-preview [myimage]="myimage" *ngFor="let myimage of image_data"></app-preview>
     
 </div>
   
