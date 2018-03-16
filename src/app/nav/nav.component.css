@@ -7,5 +7,6 @@
 }
 
 .mynav p{
-    
+    display: inline-block;
+    margin-left: 15px;
 }

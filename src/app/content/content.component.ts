@@ -8,6 +8,7 @@ import { SearchService } from '../search.service';
 })
 export class ContentComponent implements OnInit {
   image_data;
+  active_image;
   constructor(service: SearchService) {
 
     // read from serice file
