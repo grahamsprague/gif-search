@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentComponent } from '../content/content.component';
 
 @Component({
   selector: 'app-preview',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreviewComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('constructor fired!' );
+  }
 
   ngOnInit() {
   }

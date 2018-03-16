@@ -14,6 +14,7 @@ import { SearchComponent } from './search/search.component';
 import { PreviewComponent } from './preview/preview.component';
 
 import { SearchService } from './search.service';
+import { MapkeysPipe } from './mapkeys.pipe';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SearchService } from './search.service';
     NavComponent,
     ContentComponent,
     SearchComponent,
-    PreviewComponent
+    PreviewComponent,
+    MapkeysPipe
   ],
   imports: [
     BrowserModule,

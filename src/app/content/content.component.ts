@@ -7,9 +7,11 @@ import { SearchService } from '../search.service';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  data;
+  image_data;
   constructor(service: SearchService) {
-    this.data = service.getData();
+    this.image_data = JSON.parse(service.getData()) ;
+    this.image_data = this.image_data['data'];
+    console.log( this.image_data );
   }
 
   ngOnInit() {

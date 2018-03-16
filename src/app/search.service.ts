@@ -7,9 +7,9 @@ export class SearchService {
 
   getData() {
 
-    const mydata = JSON.parse( this.exampleData() );
-    // console.log( mydata['data'][0]['type'] );
-    return mydata['data'];
+    const mydata =  this.exampleData() ;
+    // console.log( mydata['data'][0] );
+    return mydata;
 
   }
 
