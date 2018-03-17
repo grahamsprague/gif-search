@@ -16,6 +16,7 @@ import { PreviewComponent } from './preview/preview.component';
 import { SearchService } from './search.service';
 import { MapkeysPipe } from './mapkeys.pipe';
 import { DetailComponent } from './detail/detail.component';
+import { DataServiceService } from './data-service.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { DetailComponent } from './detail/detail.component';
     FormsModule,
     HttpModule
   ],
-  providers: [SearchService],
+  providers: [SearchService, DataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

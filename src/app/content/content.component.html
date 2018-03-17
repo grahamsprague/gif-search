@@ -1,9 +1,12 @@
 <div class="mycontent">
   
-  <h2>XX items found for <em>Title.</em></h2>
+  <h2>{{ image_data.length }} items found for <em>Title.</em></h2>
   <hr>
 <div class="row">
-    <app-preview [myimage]="myimage" *ngFor="let myimage of image_data"></app-preview>
+    <app-preview [myimage]="myimage"
+      *ngFor="let myimage of image_data"
+      (click)="onPreviewClicked(myimage)"
+    ></app-preview>
     
 </div>
   

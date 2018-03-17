@@ -1,5 +1,11 @@
-<div class="mydetail">
-
-  <img src="{{ myimage.images.fixed_height.url }}" alt="" />
-
+<div *ngIf="myimage.url != undefined" class="mydetail">
+  <h2>Detail</h2>
+  <hr>
+  
+  <p>Title: {{ myimage.title }}</p>
+  <p>Rating: {{ myimage.rating }}</p>
+  <p>Bitty URL: {{ myimage.bitly_url }}</p>
+  <p>Embed URL: {{ myimage.embed_url }}</p>
+  <hr>
+  <img [src]="myimage.images.downsized_large.url" alt="" />
 </div>

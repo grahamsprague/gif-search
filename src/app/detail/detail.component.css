@@ -1,4 +1,11 @@
 
 .mydetail{
-    border: 1px solid silver;
+    
+    margin-right: 15px;
+    
+    
+}
+
+.mydetail img{
+    width: 200px;
 }
