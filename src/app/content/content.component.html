@@ -1,15 +1,25 @@
 <div class="mycontent">
   
-  <h2>{{ image_data.length }} items found for <em>Title.</em></h2>
-  
-<div class="row">
-    <app-preview [myimage]="myimage"
-      *ngFor="let myimage of image_data"
-      (click)="onPreviewClicked(myimage)"
-    ></app-preview>
+  <div class="panel panel-default">
     
-</div>
-  
+    <div class="panel-heading">
+        {{ image_data.length }} items found for <em>Title.</em>
+    </div>
+    
+    <div class="panel-body">
+      
+        <div class="row">
+            
+            <app-preview [myimage]="myimage"
+              *ngFor="let myimage of image_data"
+              (click)="onPreviewClicked(myimage)"
+            ></app-preview>
+          
+        </div>
+      
+    </div>
 
+  </div>
+  
 </div>
 

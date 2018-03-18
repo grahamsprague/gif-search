@@ -9,6 +9,8 @@ div {
 
 body{
     /* margin: 20px; */
+    background-color: darkgrey;
+    background-image: url('./assets/background_low.jpg');
 }
 
 hr{

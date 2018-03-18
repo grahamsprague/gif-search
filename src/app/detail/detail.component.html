@@ -1,11 +1,20 @@
 <div *ngIf="myimage.url != undefined" class="mydetail">
-  <h2>Detail</h2>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Detail
+    </div>
+  <div class="panel-body">
+    
+  
+  
   
   
   <p>Title: {{ myimage.title }}</p>
   <p>Rating: {{ myimage.rating }}</p>
-  <p>Bitty URL: {{ myimage.bitly_url }}</p>
-  <p>Embed URL: {{ myimage.embed_url }}</p>
+  <p>Bitty URL: <input type="text" value="{{ myimage.bitly_url }}" /></p>
+  <p>Embed URL: <input type="text" value="{{ myimage.embed_url }}" /></p>
   <hr>
   <img [src]="myimage.images.downsized_large.url" alt="" />
+  </div>
+  </div>
 </div>

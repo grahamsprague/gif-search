@@ -2,10 +2,14 @@
 .mydetail{
     
     margin-right: 15px;
-    
+    position: fixed;
+    margin-top: 65px;
+    z-index:  1000;
     
 }
 
 .mydetail img{
-    width: 200px;
+    width: 240px;
 }
+
+
