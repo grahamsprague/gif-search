@@ -38,7 +38,7 @@ export class ContentComponent implements OnInit {
       message => {
         this.search_value = message;
         console.log('ContentComponent search_value changed:' + this.search_value);
-        this.image_data = JSON.parse(this.search_service.getData(this.search_value))
+        this.image_data = JSON.parse(this.search_service.getData(this.search_value));
         this.image_data = this.image_data['data'] ;
     });
   }
