@@ -9,8 +9,8 @@
   
   
   
-  <p>Title: {{ myimage.title }}</p>
-  <p>Rating: {{ myimage.rating }}</p>
+  <p>Title: {{ myimage.title | uppercase }}</p>
+  <p>Rating: {{ myimage.rating | uppercase }}</p>
   <p>Bitty URL: <input type="text" value="{{ myimage.bitly_url }}" /></p>
   <p>Embed URL: <input type="text" value="{{ myimage.embed_url }}" /></p>
   <hr>

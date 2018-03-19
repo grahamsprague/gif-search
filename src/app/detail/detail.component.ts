@@ -13,7 +13,7 @@ export class DetailComponent implements OnInit {
   constructor(private data: DataServiceService) { }
 
   ngOnInit() {
-    this.data.currentMessage.subscribe(message => this.myimage = message);
+    this.data.previewComponentMessage.subscribe(message => this.myimage = message);
 
      console.log(this.myimage);
 

@@ -1,18 +1,43 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable()
 export class SearchService {
-
+    query;
   constructor() { }
 
-  getData() {
 
-    const mydata =  this.exampleData() ;
-    // console.log( mydata['data'][0] );
-    return mydata;
+  getData(query) {
+    if ( query ===  'example') {
+        return this.getExampeData();
 
+    } else if ( query === 'trends') {
+        return this.getTrends();
+
+    } else {
+        // this must be a search because we
+        return this.getSearch(query);
+
+    }
   }
 
+
+  getExampeData() {
+    const mydata =  this.exampleData() ;
+    console.log( 'SearchService: exampleData()' );
+    return mydata;
+  }
+
+  getTrends() {
+    const mydata =  this.exampleData() ;
+    console.log( 'SearchService: getTrends()' );
+    return mydata;
+  }
+
+  getSearch(query) {
+    const mydata =  this.exampleData() ;
+    console.log( 'SearchService: getSearch(' + query + ')' );
+    return mydata;
+  }
 
   exampleData() {
     return `

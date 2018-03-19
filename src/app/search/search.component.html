@@ -2,10 +2,12 @@
   <form class="form-inline">  
       
     <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
+      <form (submit)="onSubmit($event)"> 
+        <input type="text" [(ngModel)]="search_value" class="form-control" name="search" placeholder="Search for...">
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
+          <input type="submit" class="btn btn-default" value="SearchX" />
         </span>
+        </form>
     </div>
 
   </form>

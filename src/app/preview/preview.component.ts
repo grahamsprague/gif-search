@@ -3,6 +3,7 @@ import { ContentComponent } from '../content/content.component';
 import { Input } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-preview',
   templateUrl: './preview.component.html',
@@ -11,11 +12,9 @@ import { Input } from '@angular/core';
 export class PreviewComponent implements OnInit {
   @Input() myimage;
 
-
   constructor() { }
 
-  ngOnInit() { }
-
+  ngOnInit() {  }
 
 
 }

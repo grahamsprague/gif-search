@@ -4,13 +4,20 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 @Injectable()
 export class DataServiceService {
 
-  private messageSource = new BehaviorSubject<string>('default message');
-  currentMessage = this.messageSource.asObservable();
+  private previewComponent = new BehaviorSubject<string>('default message');
+  previewComponentMessage = this.previewComponent.asObservable();
+
+  private searchComponent = new BehaviorSubject<string>('default message');
+  searchComponentMessage = this.searchComponent.asObservable();
 
   constructor() { }
 
-  changeMessage(message: string) {
-    this.messageSource.next(message);
+  changeMessagePreview(message: string) {
+    this.previewComponent.next(message);
+  }
+
+  changeMessageSearch(message: string) {
+    this.searchComponent.next(message);
   }
 
 }
