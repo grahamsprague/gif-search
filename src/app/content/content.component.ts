@@ -25,7 +25,7 @@ export class ContentComponent implements OnInit {
     // get the data
     const results = JSON.parse(service.getData(this.search_value)) ;
 
-    // refocus to just the data we care about and put it into into this
+    // refocus to just the data we care about and store it in this component
     this.image_data = results['data'];
 
     // log so we can see what is happening here
