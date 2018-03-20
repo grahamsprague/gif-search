@@ -1,7 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContentComponent } from '../content/content.component';
 import { Input } from '@angular/core';
-
 
 
 @Component({
@@ -14,7 +13,7 @@ export class PreviewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {  }
-
+  ngOnInit() {
+  }
 
 }
