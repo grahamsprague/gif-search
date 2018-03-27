@@ -1,25 +1,50 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 
 @Injectable()
 export class SearchService {
     query;
-  constructor() { }
+    apiUrlTrends = 'https://api.giphy.com/v1/gifs/trending?api_key=17dWVyiAeWChJav3FJFH480SSd7aLP4b&limit=25&rating=G';
+
+    constructor(private http: HttpClient) { }
 
 
-  getData(query) {
-    if ( query ===  'example') {
-        return this.getExampeData();
+//   getData(query) {
+//     if ( query ===  'example') {
+//         return this.getExampeData();
 
-    } else if ( query === 'trends') {
-        return this.getTrends();
+//     } else if ( query === 'trends') {
+//         return this.getTrends();
 
-    } else {
-        // this must be a search because we
-        return this.getSearch(query);
+//     } else {
+//         // this must be a search because we
+//         return this.getSearch(query);
 
+//     }
+//   }
+
+
+    getData(query) {
+        if ( query === 'trends' || query === '' || query === undefined ){
+            return new Promise((resolve, reject) => {
+                const results = this.http.get(this.apiUrlTrends).subscribe(data => {
+                    resolve(data);
+                });
+            });
+        }
+        if ( query !== 'trends' && query !== '' ){
+
+            const apiUrlSearch = 'https://api.giphy.com/v1/gifs/search?api_key=17dWVyiAeWChJav3FJFH480SSd7aLP4b&q=' +
+            query +
+            '&limit=25&offset=0&rating=G&lang=en';
+
+            return new Promise((resolve, reject) => {
+                const results = this.http.get(apiUrlSearch).subscribe(data => {
+                    resolve(data);
+                });
+            });
+        }
     }
-  }
-
 
   getExampeData() {
     const mydata =  this.exampleData() ;

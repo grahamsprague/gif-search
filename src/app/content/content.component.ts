@@ -23,23 +23,30 @@ export class ContentComponent implements OnInit {
     this.search_service = service;
 
     // get the data
-    const results = JSON.parse(service.getData(this.search_value)) ;
+    // this.image_data = service.getData(this.search_value).then(
+    //   res => this.image_data = res.data
+    // );
 
     // refocus to just the data we care about and store it in this component
-    this.image_data = results['data'];
+
+    // console.log(this.image_data);
+
+
 
     // log so we can see what is happening here
-    console.log( 'ContentComponent constructor{}: ' + this.search_value );
+    // console.log( 'ContentComponent constructor{}: ' + this.search_value );
 
   }
 // need to find a way to capture the changes to search value;
   ngOnInit() {
     this.data.searchComponentMessage.subscribe(
-      message => {
+     message => {
         this.search_value = message;
         console.log('ContentComponent search_value changed:' + this.search_value);
-        this.image_data = JSON.parse(this.search_service.getData(this.search_value));
-        this.image_data = this.image_data['data'] ;
+        // get the data
+        this.image_data = this.search_service.getData(this.search_value).then(
+          res => this.image_data = res.data
+        );
     });
   }
   // capture clicks on the preview
